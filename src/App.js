@@ -35,7 +35,7 @@ function App() {
       setEnableText('Enable Light Mode');
       document.body.style.backgroundColor='#042743';
       showAlert("Dark mode has been enabled","success");
-      document.title='Textutils - Dark Mode';
+      // document.title='Textutils - Dark Mode';
 
 
 
@@ -54,7 +54,7 @@ function App() {
       setEnableText('Enable Dark Mode')
       document.body.style.backgroundColor='white';
       showAlert("Light mode has been enabled","success");
-      document.title='Textutils - Light Mode'
+      // document.title='Textutils - Light Mode'
     }
   }
   return (
@@ -74,11 +74,11 @@ function App() {
           /users/home ---->Component2 */}
 
       <Route exact path="/about">
-        <About />
+        <About mode={mode}/>
       </Route>  
 
       <Route exact path="/">
-        <TextForm showAlert={showAlert} heading="Enter the text to analyze below" mode={mode}/>
+        <TextForm showAlert={showAlert} heading="Try TextUtils - Word Counter, Character Counter, Remove Extra Spaces" mode={mode}/>
       </Route>
     </Switch>
 
